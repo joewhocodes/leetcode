@@ -10,6 +10,7 @@ var majorityElement = function(n) {
     for (let i = 0; i < n.length; i++) {
         obj[n[i]] = obj[n[i]] + 1 || 1;
         if (obj[n[i]] > n.length / 2) {
+            // better solution, just return n[i]
             return Object.keys(obj).find(key => obj[key] === obj[n[i]]);
         }
     }
