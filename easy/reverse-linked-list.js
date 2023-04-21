@@ -2,8 +2,6 @@
 // never negative nums, up to 5000
 // return linked list
 
-
-
 const reverseList = head => {
     let current = head;
     let prev = null;
