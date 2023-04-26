@@ -96,12 +96,16 @@ class BST {
     // 2, 3, 12, 15, 28, 36, 39
     dfsInOrder() {
         let result = [];
-
+        let count = 0;
         const traverse = (node) => {
+            console.log(`node is ${node.value}`)
+            count++;
+            // console.log(count)
             // if left child exists, go left again
             if (node.left) traverse(node.left);
             // capture root node value
             result.push(node.value);
+            console.log(result)
             // if right child exists, go right again
             if (node.right) traverse(node.right);
         };
@@ -136,6 +140,7 @@ class BST {
         let result = [];
 
         const traverse = (node) => {
+            
             if (node.left) traverse(node.left);
             // if right child exists, go right again
             if (node.right) traverse(node.right);
@@ -158,9 +163,11 @@ class BST {
         queue.push(this.root) 
 
         while(queue.length) {
+            console.log(`queue is ${queue.map(e => e.value)}`)
             let currentNode = queue.shift();
-
+            
             result.push(currentNode.value) 
+            console.log(result)
 
             if (currentNode.left) {
                 queue.push(currentNode.left)
@@ -179,22 +186,22 @@ class BST {
 const bst = new BST(15);
 
 bst.insert(3)
-bst.insert(26)
+bst.insert(36)
 bst.insert(2)
 bst.insert(12)
 bst.insert(28)
 bst.insert(39)
 
-console.log(bst.size());
-console.log(bst.min());
-console.log(bst.max());
+// console.log(bst.size());
+// console.log(bst.min());
+// console.log(bst.max());
 
-console.log(bst.contains(2));
-console.log(bst.contains(9));
+// console.log(bst.contains(2));
+// console.log(bst.contains(9));
 
-console.log(bst)
+// console.log(bst)
 
 console.log(bst.dfsInOrder());
-console.log(bst.dfsPreOrder());
-console.log(bst.dfsPostOrder());
-console.log(bst.bfs());
+// console.log(bst.dfsPreOrder());
+// console.log(bst.dfsPostOrder());
+// console.log(bst.bfs());
