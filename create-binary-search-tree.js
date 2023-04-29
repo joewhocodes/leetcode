@@ -1,4 +1,70 @@
 class Node {
+    constructor(val) {
+        this.val = val;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+
+class BST {
+    constructor(val) {
+        this.root = val;
+        this.count = 1;
+    }
+
+    size() {
+        return this.count;
+    }
+
+
+    insert(val) {
+        let currentNode = new Node(val);
+
+        const searchTree = node => {
+            if (val < node.val) {
+                
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Node {
     constructor(value) {
         this.value = value;
         this.left = null;
