@@ -8,7 +8,7 @@
 <br />
 <div align="center">
   <a href="https://www.leetcode.com/">
-    <img src="/logo.jpg" alt="Logo">
+    <img width="200px" src="/logo.png" alt="Logo">
   </a>
 
 <h3 align="center">Leetcode</h3>
